@@ -1,0 +1,73 @@
+.titulo{
+    display: grid;
+    grid-template-columns: 15rem 15rem 15rem 15rem 15rem;
+  }
+  
+  .dados{
+    display: flex;
+    gap: 4rem;
+  }
+  
+  .product{
+    display: grid;
+    grid-template-columns: 15rem 15rem 15rem 15rem 15rem;
+    background: #aae4ff;
+    padding: 1rem 0;
+    border-radius: 10px;
+    margin: .5rem 0;
+  }
+  
+  #products h1{
+    font-size: 3rem;
+  }
+  
+  h2, a{
+    font: 600 2rem var(--title-family);
+    color: #34355B;
+    line-height: 3rem;
+  }
+  
+  h3{
+    font: 600 1.6rem var(--title-family);
+    color: #34355B;
+    line-height: 3rem;
+  }
+  
+  .card .product p{
+    color: #34355B;
+  }
+  
+  .produtcs{
+    margin-bottom: 2rem;
+  }
+  
+  a{
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .add-delete-button{
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem;
+    font: 700 1.6rem var(--text-family);
+    line-height: 0.5rem;
+    background-color: #7879F1;
+    color: white;
+    cursor: pointer;
+    transition: background .2s;
+    height: 3rem;
+    width: 3rem;
+  }
+  
+  .product-input{
+    background: #ffffff;
+    border: none;
+    border-radius: 4px;
+    color: #34355B;
+    font: 400 1.6rem var(--text-family);
+    line-height: 1rem;
+    padding: 0rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
