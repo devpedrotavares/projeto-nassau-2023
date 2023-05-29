@@ -21,15 +21,13 @@ function OrdersPage({setPage}) {
         if(response.ok){
           const body = await response.json();
 
-          if(body.items) {
-            const convertedBody = body.map(element => {
-              const newElement = element;
-              newElement.items = JSON.parse(body.items)
-              return newElement;
-            });
+          const convertedBody = body.map(element => {
+            const newElement = element;
+            newElement.items = JSON.parse(element.items)
+            return newElement;
+          });
 
-            setOrders(convertedBody);
-          }
+          setOrders(convertedBody);
         }
 
       } catch(error){
@@ -125,10 +123,7 @@ function OrdersPage({setPage}) {
           if(response.ok) {
             const body = await response.json();
 
-            if(body.items) {
-              setOrders([...orders, {id:body.id, items:JSON.parse(body.items)}]);
-            }
-            
+            setOrders([...orders, {id:body.id, items:JSON.parse(body.items)}]);
           }
           else {
             alert("Não foi possível adicionar o pedido...");
@@ -170,8 +165,6 @@ function OrdersPage({setPage}) {
 }
 
 const Order = ({order, handleDeleteOrder, key, products}) => {
-
-  console.log(products);
 
   function getProductName(id) {
     return products.filter(product => product.id === id)[0]?.name;

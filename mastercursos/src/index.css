@@ -78,6 +78,12 @@ button{
   transition: background .2s;
 }
 
+.main-button{
+  margin-left: 5px;
+  padding: 2rem;
+  font: 700 3.5rem var(--text-family);
+}
+
 #add-order-button{
   padding: 1.0rem;
 }

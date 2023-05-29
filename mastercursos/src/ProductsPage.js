@@ -77,10 +77,10 @@ function ProductsPage({setPage}) {
       <div className="card" id="products">
       <h1>Produtos em estoque</h1>
         <div className="titulo">
-          <h2>Name</h2>
-          <h2>Description</h2>
-          <h2>Price</h2>
-          <h2>Quantity</h2>
+          <h2>Nome</h2>
+          <h2>Descrição</h2>
+          <h2>Preço</h2>
+          <h2>Quantidade</h2>
         </div>
         <div className="products">
           {products.map((product, index) => <Product key={index} item={product} handleDelete={handleDelete}/>

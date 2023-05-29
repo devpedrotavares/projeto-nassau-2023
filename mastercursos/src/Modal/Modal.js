@@ -55,11 +55,11 @@ function OrderPairInput({products, handleAddOrderPair}){
     const [productId, setProductId] = useState(products[0]?.id);
 
     return(
-        <div>
-            <input value={quantity} type="number" onChange={(e) => setQuantity(e.target.value)}/>
+        <div className="order">
+            <input className="order-input" value={quantity} type="number" onChange={(e) => setQuantity(e.target.value)}/>
 
             <select className="order-input" onChange={(e) => setProductId(e.target.value)}>
-              {products.map(products => (<option value={products.id}> {products.name} </option>))}
+              {products.map(product => (<option key={product.id} value={product.id}> {product.name} </option>))}
             </select>
 
             <button onClick={() => handleAddOrderPair({"quantity":quantity, "productId":productId})} className="add-delete-button">+</button>

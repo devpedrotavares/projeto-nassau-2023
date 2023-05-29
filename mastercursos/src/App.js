@@ -21,9 +21,9 @@ function App() {
 
 function MainPage({setPage}) {
 
-  return (<><div id="main-title"><h1>Aplicativo de caixa</h1></div>
-  <div><button onClick={() => setPage("ProductsPage")}>Produtos</button>
-  <button onClick={() => setPage("OrdersPage")}>Pedidos</button></div></>);
+  return (<><div id="main-title"></div>
+  <div><button className="main-button" onClick={() => setPage("ProductsPage")}>Produtos</button>
+  <button className="main-button" onClick={() => setPage("OrdersPage")}>Pedidos</button></div></>);
 }
 
 export default App;
